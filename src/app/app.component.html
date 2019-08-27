@@ -1,0 +1,53 @@
+<div class="app-wrapper" [ngClass]="{'toggle-sidebar':toggleSidebar}" [style.background-image]="'url('+appBgImage+')'"  >
+  <nav class="navbar">
+    <h2>INCEPTION</h2>
+    <button (click)="toggleSidebar=true"><i class="lni-menu"></i></button>
+  </nav>
+  <aside class="sidebar">
+    <header>
+        <h4>MEDITATIONS</h4>
+        <button (click)="toggleSidebar=false"><i class="lni-close"></i></button>
+    </header>
+    <div class="search">
+      <i class="lni-search"></i>
+      <input type="text" class="form-control" [(ngModel)]="search" name="search" placeholder="Search meditation" />
+    </div>
+    <ul class="meditation-list">
+      <li *ngFor="let i of meditations | filter:search" (click)="setMeditation(i)"
+         
+        [ngClass]="{active:currentSong.audio===i.audio}">
+        <img [src]="i.img+'-thumb.jpg'">
+        <div>
+            <h4 class="title">{{i.title}}</h4>
+            <p class="desc">{{i.desc}}</p>
+        </div>
+      </li>
+
+
+    </ul>
+    
+    <div class="app-settings" [ngClass]="{open:toggleAppSettings}">
+      <div class="header-settings">
+        <h5 (click)="toggleAppSettings=!toggleAppSettings">
+              <span>Background Image</span>
+              <button class="lni-chevron-down" ></button>
+        </h5> 
+      </div>
+      <section class="section-settings">
+      <ul>
+        <li *ngFor="let bg of appBg" [ngClass]="{active:appBgImage === bg.img}">
+            <img  [src]="bg.thumb" (click)="setBgImage(bg.img)">
+        </li>
+      </ul>
+    </section>
+    </div>
+
+  </aside>
+  <div class="inner-wrapper">
+    <audio-player [currentSong]="currentSong"></audio-player>
+  </div>
+  <footer class="footer">
+    <i class="lni-github"></i> Developed by <a href="http://github.com/rolyart">Roland Maruntalu</a>
+  </footer>
+
+</div>

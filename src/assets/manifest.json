@@ -1,0 +1,20 @@
+{
+    "short_name": "Inception",
+    "name": "",
+    "icons": [
+      {
+        "src":"favicon-194x194.png",
+        "sizes": "194x194 512x512",
+        "type": "image/png"
+      },
+      {
+        "src":"favicon-144x144.png",
+        "sizes": "144x144",
+        "type": "image/png"
+      }
+    ],
+    "start_url": "/inception/index.html",
+    "background_color": "#000000",
+    "theme_color": "#000000",
+    "display": "standalone"
+  }

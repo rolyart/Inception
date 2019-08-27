@@ -1,0 +1,29 @@
+<div class="audio-player" [style.background-image]="'url('+currentSong.img+'-cover.jpg)'">
+    <audio class="song">
+    </audio>
+    <button class="play-control" [ngClass]="{'lni-play':!isPlaying, 'lni-pause':isPlaying}" (click)="playAudio()"></button>
+    <button class="replay-control lni-reload" (click)="replayAudio()"></button>
+    <h3 class="time-display">{{timeDisplay}}</h3>
+    <svg class="track-outline"   viewBox="0 0 453 453" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="226.5" cy="226.5" r="216.5" stroke="#190A2F" stroke-width="20"/>
+    </svg>
+    <svg class="moving-outline"  viewBox="0 0 453 453" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="226.5" cy="226.5" r="216.5" stroke="#5A0BFF" stroke-width="20"/>
+    </svg>
+</div>
+<div class="player-description">
+        <h3>{{currentSong.title}}</h3>
+        <p>{{currentSong.desc}}</p>
+</div>
+
+<div class="timer">
+        <button 
+          *ngFor="let t of timerRange" 
+          [ngClass]="{'active':timer===t*60}"
+          (click)="setTimer(t)">
+          {{t}}
+        </button>
+    </div>
+
+
+

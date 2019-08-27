@@ -1,0 +1,99 @@
+.audio-player{
+    position: relative;
+    width:240px;
+    height:240px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 80px #8C18EB;
+    margin:auto;
+    border-radius:50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    transition:all .3s ease;
+    margin-bottom:25px;
+    button{
+        border:none;
+        cursor: pointer;
+    }
+    .play-control{
+        width:56px;
+        height:56px;
+        line-height: 56px;
+        font-size:56px;
+        background-color: transparent;
+        text-align:center;
+        padding:0;
+        color:rgba(255, 255, 255, .8);
+        &:hover{
+           color:white; 
+        }
+    }
+    .replay-control{
+        position: absolute;
+        bottom:-7px;
+        width:44px;
+        height:44px;
+        line-height: 38px;
+        font-size:24px;
+        right:20%;
+        border-radius:50%;
+        background-color: rgba(0, 0, 0, .4);
+        color:rgba(255, 255, 255, .6);
+        border:2px solid rgba(0, 0, 0, .3);
+        box-shadow: 0 0 15px #8C18EB;
+        z-index: 5;
+        &:hover{
+            color:white;
+        }
+    }
+    .time-display{
+        position: absolute;
+        bottom:40px;
+        width:100%;
+        text-align: center;
+        color:rgba(255, 255, 255, .8);
+        margin:0;
+        font-weight: lighter;
+    }
+    svg {
+        position: absolute;
+        pointer-events: none;
+        width:100%;
+        height:100%;
+        circle {
+            transition: all .25s ease-in-out;
+        }
+    }
+
+}
+.player-description{
+    text-align: center;
+    margin-bottom:20px;
+    h3{
+        color:white;
+        margin:0;
+    }
+    p{
+        color:rgba(255, 255, 255, .8);
+        margin:0;
+        font-weight: lighter;
+        font-size:14px;
+    }
+}
+
+@media (max-width:768px) {
+    .audio-player{
+        width:160px;
+        height:160px;
+        .replay-control{
+            right:20px;
+        }
+        .time-display{
+            bottom:20px;
+            font-size:16px;
+        }
+    }
+}
+
