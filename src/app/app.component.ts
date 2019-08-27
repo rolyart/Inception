@@ -50,7 +50,7 @@ export class AppComponent {
     {img:'assets/img/epicmotivational.jpg', thumb:'assets/img/epicmotivational-thumb.jpg'},
     {img:'assets/img/evening.jpg', thumb:'assets/img/evening-thumb.jpg'},
   ]
-  appSettings = {timer:900, currentSong:this.meditations[0], appBgImage:'assets/img/evening.jpg'}
+  appSettings = {timer:800, currentSong:this.meditations[0], appBgImage:'assets/img/evening.jpg'}
   appData = localStorage.getItem("inceptionData")?JSON.parse(localStorage.getItem("inceptionData")):{settings:this.appSettings};
   currentSong = this.appData.settings.currentSong;
   appBgImage = this.appData.settings.appBgImage;
