@@ -1,9 +1,8 @@
 # Inception
-Angular app for meditation.
+Angular app for meditation. [Demo](http://apps.rolyart.ro/inception)
 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.2.
-View [Demo](http://apps.rolyart.ro/inception)
 
 ## Development server
 
