@@ -1,4 +1,4 @@
-# Inception
+# Inception - meditation app
 Angular app for meditation. [Demo](http://apps.rolyart.ro/inception)
 
 
